@@ -1,0 +1,38 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Agi Muhammad Tengku Aqamaddin Portfolio",
+  "main": "api/index.js",
+  "scripts": {
+  "start": "node api/index.js",
+  "dev": "nodemon api/local.js",
+  "build": "echo 'No build step required'",
+  "vercel-build": "echo 'Build completed'"
+},
+
+  "keywords": [
+    "portfolio",
+    "api",
+    "backend",
+    "express",
+    "nodejs",
+    "postgresql"
+  ],
+  "author": "Agi Muhammad Tengku Aqamaddin <tengkuagi@gmail.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "20": "^3.1.9",
+    "@vendia/serverless-express": "^4.12.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^5.1.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
