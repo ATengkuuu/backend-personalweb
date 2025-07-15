@@ -207,6 +207,34 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+app.get('/', (req, res) => {
+  res.json({
+    status: 'OK',
+    message: '👋 Welcome to Agi Muhammad Tengku Aqamaddin Portfolio Backend API!',
+    version: '1.0.0',
+    author: 'Agi Muhammad Tengku Aqamaddin',
+    docs: 'https://github.com/ATengkuuu/backend-personalweb.git', 
+    available_endpoints: [
+      { method: 'GET', path: '/api/health', description: 'Check API health status' },
+      { method: 'GET', path: '/api/personal-info', description: 'Get personal info' },
+      { method: 'GET', path: '/api/site-config', description: 'Get site config' },
+      { method: 'GET', path: '/api/experience', description: 'Get experience data' },
+      { method: 'GET', path: '/api/certificates', description: 'Get certificates data' },
+      { method: 'GET', path: '/api/blog-posts', description: 'Get blog posts' },
+      { method: 'GET', path: '/api/skills', description: 'Get list of skills' },
+      { method: 'GET', path: '/api/education', description: 'Get education data' },
+      { method: 'GET', path: '/api/projects', description: 'List all projects' },
+      { method: 'GET', path: '/api/projects/:id', description: 'Get detail of a project by ID' },
+      { method: 'POST', path: '/api/projects', description: 'Create a new project' },
+      { method: 'PUT', path: '/api/projects/:id', description: 'Update a project by ID' },
+      { method: 'DELETE', path: '/api/projects/:id', description: 'Delete a project by ID' },
+      { method: 'GET', path: '/api/personal', description: 'Get personal profile from DB' },
+      { method: 'POST', path: '/api/contact', description: 'Submit contact form message' }
+    ],
+    timestamp: new Date().toISOString()
+  });
+});
+
 // ==================================
 // ✅ 404 & Error Handler
 // ==================================
